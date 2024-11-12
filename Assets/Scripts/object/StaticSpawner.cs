@@ -18,12 +18,24 @@ public class StaticSpawner : MonoBehaviour
 
     private void Update()
     {
+
         // 플레이어보다 뒤에 있는 장애물 파괴
         for (int i = spawnedObstacles.Count - 1; i >= 0; i--)
         {
-            if (player.position.z > spawnedObstacles[i].transform.position.z+4f)
+            GameObject obstacle = spawnedObstacles[i];
+
+            // 오브젝트가 이미 파괴되었는지 확인
+            if (obstacle == null)
             {
-                Destroy(spawnedObstacles[i]);
+                // 리스트에서 제거만 하고 넘어감
+                spawnedObstacles.RemoveAt(i);
+                continue;
+            }
+
+            // 플레이어보다 뒤에 있는 장애물만 파괴
+            if (player.position.z > obstacle.transform.position.z+4f)
+            {
+                Destroy(obstacle);
                 spawnedObstacles.RemoveAt(i);
             }
         }

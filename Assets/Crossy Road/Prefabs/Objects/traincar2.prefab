@@ -97,7 +97,7 @@ GameObject:
   - component: {fileID: 8684876315928965753}
   m_Layer: 0
   m_Name: traincar2
-  m_TagString: train
+  m_TagString: MovingObstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -249,7 +249,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52c799d9d10fb524aa49490f819bee4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 4
+  speed: 5
 --- !u!1 &156956
 GameObject:
   m_ObjectHideFlags: 0

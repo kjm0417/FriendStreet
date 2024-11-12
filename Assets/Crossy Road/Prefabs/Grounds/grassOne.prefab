@@ -180,6 +180,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 487804}
+  - component: {fileID: 3976205516315863310}
   m_Layer: 0
   m_Name: spawnController
   m_TagString: Untagged
@@ -204,6 +205,25 @@ Transform:
   - {fileID: 404440}
   m_Father: {fileID: 449742}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3976205516315863310
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 175248}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7412c5915582a846ad881307d559436, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  staticObstacles:
+  - {fileID: 1193172465127051517, guid: 1b0c627b7b492e54fb7244fdb0038d88, type: 3}
+  - {fileID: 4153904840138519762, guid: e88d753d0943c0b49b581a77769253b7, type: 3}
+  obstacleCount: 5
+  spawnRangeX: 20
+  spawnRangeZ: 1
+  player: {fileID: 0}
 --- !u!1 &189126
 GameObject:
   m_ObjectHideFlags: 0

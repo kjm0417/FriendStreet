@@ -8,6 +8,10 @@ public class PlayerController : MonoBehaviour
 {
     private Vector3 moveValue;
     public float distance = 1;
+    public Transform chick;
+
+    [Header("Audio Source")]
+    public AudioSource jumpSound;
 
     void Start()
     {
@@ -35,18 +39,26 @@ public class PlayerController : MonoBehaviour
 
         if (context.performed)
         {
-            // X축과 Z축으로만 이동하도록 변경
+            // performed 상태에서는 이동 값만 설정 (이동은 하지 않음)
             moveValue = new Vector3(input.x * distance, 0, input.y * distance);
+            chick.rotation = Quaternion.Euler(-90, moveValue.x * 90, 0);
 
-            // 플레이어의 위치 갱신
-            transform.position += moveValue;
+            if(moveValue.z < 0f)
+            {
+                chick.rotation = Quaternion.Euler(-90, moveValue.z * 180, 0);
+            }
         }
         else if (context.canceled)
         {
-            // 입력이 취소되면 moveValue를 초기화 (옵션)
-            moveValue = Vector3.zero;
+            // 버튼에서 손을 뗄 때만 이동을 수행
+            jumpSound.Play();
+            transform.position += moveValue;
+            UIManager.Instance.ScoreUP();
+            moveValue = Vector3.zero; // 이동 후 moveValue 초기화
         }
 
     }
 
+
+ 
 }

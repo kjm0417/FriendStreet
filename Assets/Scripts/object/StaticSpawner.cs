@@ -5,8 +5,8 @@ public class StaticSpawner : MonoBehaviour
 {
     public ObstacleBase[] staticObstacles; // 생성할 정적인 장애물 프리팹들 (코인, 나무 등)
     public int obstacleCount = 5;          // 생성할 장애물 수
-    public float spawnRangeX = 20f;         // x축 랜덤 생성 범위
-    public float spawnRangeZ = 0;         // z축 랜덤 생성 범위
+    public int spawnRangeX = 20;         // x축 랜덤 생성 범위
+    public float spawnRangeZ = 0;          // z축 랜덤 생성 범위
     public Transform player;               // 플레이어의 Transform (플레이어 위치를 알기 위해 필요)
 
     private List<GameObject> spawnedObstacles = new List<GameObject>();
@@ -49,7 +49,8 @@ public class StaticSpawner : MonoBehaviour
             ObstacleBase staticObstaclePrefab = staticObstacles[Random.Range(0, staticObstacles.Length)];
 
             // 랜덤 위치 생성
-            Vector3 randomPosition = transform.position + new Vector3(Random.Range(-spawnRangeX, spawnRangeX),0,Random.Range(0, spawnRangeZ)
+            int RandomX = Random.Range(-spawnRangeX, spawnRangeX);
+            Vector3 randomPosition = transform.position + new Vector3(RandomX, 0,Random.Range(0, spawnRangeZ)
 );
 
             // 장애물 생성 및 위치 초기화

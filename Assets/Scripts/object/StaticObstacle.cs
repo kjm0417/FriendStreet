@@ -7,4 +7,5 @@ public class StaticObstacle : ObstacleBase
         transform.position = position;
         // 정적인 장애물은 방향을 필요로 하지 않으므로 direction은 무시
     }
+
 }

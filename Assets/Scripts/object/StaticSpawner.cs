@@ -50,8 +50,7 @@ public class StaticSpawner : MonoBehaviour
 
             // 랜덤 위치 생성
             int RandomX = Random.Range(-spawnRangeX, spawnRangeX);
-            Vector3 randomPosition = transform.position + new Vector3(RandomX, 0,Random.Range(0, spawnRangeZ)
-);
+            Vector3 randomPosition = transform.position + new Vector3(RandomX, 0,Random.Range(0, spawnRangeZ));
 
             // 장애물 생성 및 위치 초기화
             GameObject obstacle = Instantiate(staticObstaclePrefab.gameObject, randomPosition, Quaternion.identity);

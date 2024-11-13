@@ -25,7 +25,7 @@ Transform:
   m_GameObject: {fileID: 105634}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.5, y: 0, z: 0.25}
+  m_LocalPosition: {x: -0.5, y: 0.325, z: 0.25}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -56,7 +56,7 @@ Transform:
   m_GameObject: {fileID: 107064}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.5, y: 0, z: -0.25}
+  m_LocalPosition: {x: -0.5, y: 0.325, z: -0.25}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -87,7 +87,7 @@ Transform:
   m_GameObject: {fileID: 117150}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.5, y: 0, z: 0.25}
+  m_LocalPosition: {x: 0.5, y: 0.325, z: 0.25}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -118,7 +118,7 @@ Transform:
   m_GameObject: {fileID: 133920}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.5, y: 0, z: -0.25}
+  m_LocalPosition: {x: 0.5, y: 0.325, z: -0.25}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -240,7 +240,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 402298}
-  - component: {fileID: 4325232161104539473}
+  - component: {fileID: 8635916289683627244}
   m_Layer: 0
   m_Name: spawnController
   m_TagString: Untagged
@@ -267,7 +267,7 @@ Transform:
   - {fileID: 431240}
   m_Father: {fileID: 441770}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4325232161104539473
+--- !u!114 &8635916289683627244
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -276,21 +276,22 @@ MonoBehaviour:
   m_GameObject: {fileID: 175074}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 693afbd47dbe2244680e1a9db0ea550c, type: 3}
+  m_Script: {fileID: 11500000, guid: ab6a5b0f5b62fc74b9f4f6c03e09a11f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movingObstacles:
-  - {fileID: 8283219940980645812, guid: 39a7e941a64fb034caae3c6c80804ffc, type: 3}
-  - {fileID: 593980474069319367, guid: 41387607d4f8d9e44a9e813c776943d4, type: 3}
-  - {fileID: 1040916441603429485, guid: 8dd2343005dbd8b469e430e4fe7caeeb, type: 3}
-  - {fileID: 1642068227337039224, guid: 4195b4ff6d0a23f42ad9b7dbe76a33e3, type: 3}
-  spawnerPoints:
+  carDataArray:
+  - {fileID: 11400000, guid: d89f355fbd6ad9a42a4bfe455b42ee68, type: 2}
+  - {fileID: 11400000, guid: 855ec7acd03ab3042b35a1f5f6393f65, type: 2}
+  - {fileID: 11400000, guid: aae16991331f44e4b9a852ea23e3a00e, type: 2}
+  - {fileID: 11400000, guid: 58cbbdffb53fec740b97bc9a519865f9, type: 2}
+  carPrefab: {fileID: 6236356700706651058, guid: 24c79631edd02534a983578681fdf80d, type: 3}
+  spawnPoints:
   - {fileID: 107064}
   - {fileID: 105634}
   - {fileID: 117150}
   - {fileID: 133920}
   minSpawnInterval: 1
-  maxSpawnInterval: 2
+  maxSpawnInterval: 1.5
 --- !u!1 &2041835760
 GameObject:
   m_ObjectHideFlags: 0

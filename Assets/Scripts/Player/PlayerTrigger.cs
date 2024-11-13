@@ -7,6 +7,7 @@ public class PlayerTrigger : MonoBehaviour
 {
     public bool isAlive = true; // 플레이어 생존 여부
     public AudioSource coinSound;
+    public ParticleSystem particle = null;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -33,8 +34,10 @@ public class PlayerTrigger : MonoBehaviour
     public void Die()
     {
         isAlive = false;
-        Debug.Log("Player is dead!");
-        // 사망 로직 추가 (예: UI 업데이트, 게임 재시작 옵션 등)
+        ParticleSystem.EmissionModule em = particle.emission;
+        em.enabled = true;
+        // 사망 로직 추가 (UI 켜지는거 추가)
+
     }
 
    
